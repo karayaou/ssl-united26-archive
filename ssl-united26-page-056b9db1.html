@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于世界杯 · 简明定位</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1a1e23;
+            line-height: 1.6;
+            padding: 2rem 1.2rem;
+        }
+
+        .page-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        /* 卡片通用样式 */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #dee2e6;
+            padding: 2rem 1.8rem;
+            margin-bottom: 1.6rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: center;
+            padding: 2.8rem 1.8rem 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #0f1419;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .byline {
+            font-size: 1rem;
+            color: #536471;
+            border-bottom: 1px solid #e1e5ea;
+            padding-bottom: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero .sub {
+            font-size: 0.95rem;
+            color: #6b7a8a;
+            margin-top: 0.8rem;
+        }
+
+        /* 引言 / 引用提示 */
+        .pull-quote {
+            margin: 1.8rem 0 1rem;
+            padding: 1rem 1.4rem;
+            border-left: 4px solid #0057b3;
+            background: #f7f9fc;
+            border-radius: 0 12px 12px 0;
+            font-size: 1rem;
+            font-style: normal;
+            color: #1f2a36;
+        }
+
+        .pull-quote strong {
+            color: #00305e;
+        }
+
+        /* 段落排版 */
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.6rem 0 0.6rem;
+            color: #151b22;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .highlight-link {
+            color: #004e9e;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid #b6c8db;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        .highlight-link:hover {
+            color: #002852;
+            border-bottom-color: #002852;
+        }
+
+        /* 场景列表 (简洁) */
+        .scenario-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.8rem 0 1.2rem;
+        }
+
+        .scenario-list li {
+            padding: 0.5rem 0 0.5rem 1.6rem;
+            position: relative;
+            border-bottom: 1px solid #eef1f4;
+        }
+
+        .scenario-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #0057b3;
+            font-weight: 400;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            margin: 1.2rem 0 0.6rem;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #10161e;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            color: #3a4a5c;
+            margin-left: 0.4rem;
+        }
+
+        /* 访问句 */
+        .access-note {
+            margin-top: 1.8rem;
+            padding: 1rem 1.4rem;
+            background: #f0f3f8;
+            border-radius: 14px;
+            border: 1px solid #dce2ea;
+            font-size: 0.95rem;
+        }
+
+        .access-note a {
+            color: #003e7e;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed #a0b7cf;
+        }
+
+        .access-note a:hover {
+            color: #001f41;
+            border-bottom-style: solid;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+
+            .card {
+                padding: 1.4rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: 1.8rem 0.8rem 1.4rem;
+            }
+        }
+
+        /* 分割线微装饰 */
+        .divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d0d6dd, transparent);
+            margin: 1.2rem 0 1.6rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- hero 卡片 -->
+        <section class="card hero">
+            <h1>世界赛 · 用途速览</h1>
+            <div class="byline">定位简洁，信息优先</div>
+            <p class="sub">从第一眼就理解这个站点能为你提供什么</p>
+        </section>
+
+        <!-- 导语 + 引用提示 -->
+        <article class="card">
+            <p style="font-size: 1.02rem;">当你第一次打开一个与顶级赛事相关的网站，最直接的需求往往是：<strong>快速判断它是否值得深入</strong>。以下内容帮你从结构、内容类型、典型使用场景三个层面建立认知。</p>
+
+            <div class="pull-quote">
+                <strong>提示</strong> —— 本页不堆砌术语，只陈述事实与边界。如需直接了解赛事情报、数据或社区动态，可参考下文指向的访问路径。
+            </div>
+
+            <!-- 正文 多段 -->
+            <h2>内容架构与信息来源</h2>
+            <p>该平台围绕国际足坛盛事构建，主要涵盖赛事日历、球队档案、历史数据与即时资讯。信息组织方式偏向于模块化，方便按需查找，而非线性阅读。无论你是想回顾经典对决，还是跟踪当前赛季的积分变化，都能在对应分区找到结构化呈现。</p>
+
+            <p>与其他同类站点相比，它更侧重数据的准确性以及多语言覆盖——部分页面提供英文与中文双语摘要。但需要留意，并非所有栏目都已完全中文化，个别深层统计表格仍以英文为主。</p>
+
+            <h2>典型使用场景</h2>
+            <ul class="scenario-list">
+                <li><strong>赛前研究</strong> —— 查看交锋记录、近期状态、伤停信息，辅助观赛决策。</li>
+                <li><strong>赛后复盘</strong> —— 查阅实时统计、进球详情、战术图表。</li>
+                <li><strong>横向比较</strong> —— 对比不同届次的世界杯数据，发现趋势与纪录。</li>
+                <li><strong>资讯过滤</strong> —— 获取经过整理的新闻摘要而非原始流式推送。</li>
+            </ul>
+
+            <p>以上场景均建立在站点现有功能之上，不存在夸大的“独家预测”或“内幕消息”。一切数据均来自公开渠道与授权合作方。</p>
+
+            <hr class="divider">
+
+            <!-- FAQ 摘要 -->
+            <h2>常见疑问摘要</h2>
+            <div class="faq-item">
+                <div class="faq-q">问：是否需要注册才能浏览主要板块？</div>
+                <div class="faq-a">大部分赛程与球队页面无需登录即可访问，但部分个性化功能（如收藏对比、历史查询记录）需注册账户。注册流程简洁，仅需邮箱与昵称。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">问：移动端适配程度如何？</div>
+                <div class="faq-a">响应式设计覆盖多数主流设备，表格在窄屏下会自动变为横向滚动。推荐在平板或桌面端获得完整排版体验。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">问：信息更新频率？</div>
+                <div class="faq-a">比赛数据通常在终场后 15–30 分钟内更新；新闻板块每日上午与晚间各刷新一次。非赛事周期内容更新会相应放缓。</div>
+            </div>
+
+            <!-- 访问句 (自然嵌入链接) -->
+            <div class="access-note">
+                <strong>访问路径</strong> —— 若上述内容符合你的预期，可以通过 <a href="https://ssl-united26.com">世界杯</a> 直接进入主站，从赛程总览或球队列表开始探索。建议首次使用先浏览「关于」页面，以了解数据来源与版权说明。
+            </div>
+
+            <!-- 额外一段：克制提示 -->
+            <p style="margin-top: 1.2rem; font-size: 0.92rem; color: #596b7d;">最后提醒：任何赛事站点都无法保证 100% 实时无误，重大比赛期间建议同时参考官方渠道。本页面仅作为用途介绍，不含任何诱导点击或夸大宣传。</p>
+        </article>
+
+        <!-- 底部轻量卡片 (可理解为元信息) -->
+        <section class="card" style="padding: 1rem 1.8rem; text-align: center; background: #f8fafc;">
+            <p style="margin: 0; font-size: 0.88rem; color: #64748b;">站点定位 · 简洁博客式介绍页 ｜ 内容仅供快速识别用途</p>
+        </section>
+    </div>
+</body>
+</html>
